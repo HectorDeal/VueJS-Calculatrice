@@ -28,7 +28,7 @@ main {
 .result{
     display: flex;
     flex-direction: column-reverse;
-    height: 30%;
+    height: 25%;
     background: #283637;
     color:white;
     margin: 5%;
@@ -36,12 +36,15 @@ main {
 .resultat {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     height: 60%;
     width: 100%;
+    font-size: 50px;
 }
 .calculs {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     height: 40%;
     width: 100%;
 }
