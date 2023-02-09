@@ -26,13 +26,28 @@ main {
     border-radius: 20px;
 }
 .result{
-    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
     height: 30%;
     background: #283637;
+    color:white;
+    margin: 5%;
+}
+.resultat {
+    display: flex;
+    justify-content: flex-end;
+    height: 60%;
+    width: 100%;
+}
+.calculs {
+    display: flex;
+    justify-content: flex-end;
+    height: 40%;
+    width: 100%;
 }
 .interaction {
     width: 100%;
-    height: 92%;
+    height: 90%;
     background: #283637;
 }
 .ac-retour {
