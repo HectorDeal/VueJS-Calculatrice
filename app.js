@@ -84,7 +84,7 @@ new Vue({
         },
         pourcent() {
             this.result = `${parseFloat(this.calculs) / 100}`;
-            this.calculs = `${this.calculs}%`;
+            this.calculs += "%";
         },
         sign() {
             this.calculs = this.calculs.charAt(0) === '-' ?
@@ -104,6 +104,7 @@ new Vue({
         division() {
             this.operator = (a, b) => parseFloat(a) / parseFloat(b);
             this.calculs += "÷";
+            this.setPrevious();
         },
         multiplication() {
             this.operator = (a, b) => parseFloat(a) * parseFloat(b);
@@ -118,8 +119,9 @@ new Vue({
             this.calculs += "+";
         },
         equal() {
-            this.result = this.operator(this.previous, parseFloat(this.calculs));
-            this.calculs = null;
+            // this.result = this.operator(this.calculs, parseFloat(this.calculs));
+            this.result = `${this.operator(this.previous, parseFloat(this.calculs))}`;
+            console.log(result)
             },
     }
 })
