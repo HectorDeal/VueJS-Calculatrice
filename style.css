@@ -47,6 +47,7 @@ main {
     align-items: center;
     height: 40%;
     width: 100%;
+    overflow-y: scroll;
 }
 .interaction {
     width: 100%;
@@ -139,4 +140,19 @@ main {
 .reset:hover {
     background: #D27200;
     color: white;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #283637; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #009285; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid #283637; /* creates padding around scroll thumb */
 }

@@ -15,42 +15,42 @@
     <main>
         <div class="result">
             <div class="calculs">
-                <a> 7 x 8 = {{number}}</a>
+                <a>{{calculs || '0'}}</a>
             </div>
             <div class="resultat">
-                <a>56</a>
+                <a>{{result}} =</a>
             </div>
         </div>
         <div class="interaction">
             <div class="ac-retour col-4">
-                <div class="ac eltm reset">AC</div>
-                <div class="return eltm reset">RET</div>
-                <div class="pourcentage eltm tools">%</div>
-                <div class="division eltm tools">/</div>
+                <div class="ac eltm reset" @click="ac()">AC</div>
+                <div class="return eltm reset" @click="reset()">RET</div>
+                <div class="pourcentage eltm tools" @click="pourcent()">%</div>
+                <div class="division eltm tools" @click="division()">/</div>
             </div>
             <div class="calc789x col-4">
-                <div class="7 eltm number">7</div>
-                <div class="8 eltm number">8</div>
-                <div class="9 eltm number">9</div>
-                <div class="x eltm number tools">X</div>
+                <div class="7 eltm number" @click="addnumber(7)">7</div>
+                <div class="8 eltm number" @click="addnumber(8)">8</div>
+                <div class="9 eltm number" @click="addnumber(9)">9</div>
+                <div class="x eltm number tools" @click="multiplication()">X</div>
             </div>
             <div class="calc456- col-4">
-                <div class="4 eltm number">4</div>
-                <div class="5 eltm number">5</div>
-                <div class="6 eltm number">6</div>
-                <div class="- eltm tools">-</div>
+                <div class="4 eltm number" @click="addnumber(4)">4</div>
+                <div class="5 eltm number" @click="addnumber(5)">5</div>
+                <div class="6 eltm number" @click="addnumber(6)">6</div>
+                <div class="- eltm tools" @click="soustraction()">-</div>
             </div>
             <div class="calc123plus col-4">
-                <div class="1 eltm number">1</div>
-                <div class="2 eltm number">2</div>
-                <div class="3 eltm number">3</div>
-                <div class="plus eltm tools">+</div>
+                <div class="1 eltm number" @click="addnumber(1)">1</div>
+                <div class="2 eltm number" @click="addnumber(2)">2</div>
+                <div class="3 eltm number" @click="addnumber(3)">3</div>
+                <div class="plus eltm tools" @click="addition()">+</div>
             </div>
             <div class="calc0 col-4">
-                <div class="plusmoins eltm">+-</div>
-                <div class="0 eltm number">0</div>
-                <div class="point eltm number">.</div>
-                <div class="egal eltm tools">=</div>
+                <div class="plusmoins eltm" @click="sign()">+-</div>
+                <div class="0 eltm number" @click="addnumber(0)">0</div>
+                <div class="point eltm number" @click="point()">.</div>
+                <div class="egal eltm tools" @click="equal()">=</div>
             </div>
         </div>
     </main>
